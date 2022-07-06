@@ -14,30 +14,37 @@ class Solution {
         while(j<n && nums[j]==val)
             j++;
         while(j<n && i<n){
-            if(nums[i]==val && nums[j]!=val){
-                nums[i]=nums[j];
-                // System.out.println("1 i:"+i+" j:"+j);
+            while(j<n && nums[j]==val)
                 j++;
-                while(j<n && nums[j]==val)
-                    j++;
-                i++;
-            }
-            else if(nums[j]!=val){
+            if(j<n)
                 nums[i] = nums[j];
-                // System.out.println("2 i:"+i+" j:"+j);
-                i++;
-                j++;
-            }
-            else{
-                while(j<n && nums[j]==val)
-                    j++;
-                if(j<n){
-                    nums[i] = nums[j];
-                    // System.out.println("3 i:"+i+" j:"+j);
-                    i++;
-                    j++;
-                }
-            }
+            // System.out.println("2 i:"+i+" j:"+j);
+            i++;
+            j++;
+            // if(nums[i]==val && nums[j]!=val){
+            //     nums[i]=nums[j];
+            //     // System.out.println("1 i:"+i+" j:"+j);
+            //     j++;
+            //     while(j<n && nums[j]==val)
+            //         j++;
+            //     i++;
+            // }
+            // else if(nums[j]!=val){
+            //     nums[i] = nums[j];
+            //     // System.out.println("2 i:"+i+" j:"+j);
+            //     i++;
+            //     j++;
+            // }
+            // else{
+            //     while(j<n && nums[j]==val)
+            //         j++;
+            //     if(j<n){
+            //         nums[i] = nums[j];
+            //         // System.out.println("3 i:"+i+" j:"+j);
+            //         i++;
+            //         j++;
+            //     }
+            // }
         }
         return n-c;
     }
