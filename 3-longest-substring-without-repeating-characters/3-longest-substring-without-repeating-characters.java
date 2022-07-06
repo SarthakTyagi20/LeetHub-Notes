@@ -10,16 +10,16 @@ class Solution {
                 l++;
                 ans = Math.max(ans, l);
                 map.put(s.charAt(i), i);
-                // System.out.println("str:"+str+" l:"+l+" i:"+i);
+                System.out.println("str:"+str+" l:"+l+" i:"+i);
             }
             else{
-                l=1;
+                l=i-map.get(s.charAt(i));
                 str=map.get(s.charAt(i))+1;
                 // map.put(s.charAt(i), i);
-                i=str;
-                map = new HashMap<>();
-                map.put(s.charAt(str), str);
-                // System.out.println("str:"+str);
+                // i=str;
+                // map = new HashMap<>();
+                map.put(s.charAt(i), i);
+                System.out.println("str:"+str);
             }
         }
         return ans;
