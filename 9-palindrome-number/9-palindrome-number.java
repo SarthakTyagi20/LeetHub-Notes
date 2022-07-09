@@ -5,20 +5,21 @@ class Solution {
         }
         if(x==0)
             return true;
-        ArrayList<Integer> a = new ArrayList<>();
-        while(x>0){
-            int r=x%10;
-            x/=10;
-            a.add(r);
+        int rev = 0, y = x;
+        // ArrayList<Integer> a = new ArrayList<>();
+        while(y>0){
+            rev = rev*10 + y%10;
+            y/=10;
+            // a.add(r);
         }
-        int i=0, j=a.size()-1;
-        while(i<j){
-            if(a.get(i)!=a.get(j)){
-                return false;
-            }
-            i++;
-            j--;
-        }
-        return true;
+        // int i=0, j=a.size()-1;
+        // while(i<j){
+        //     if(a.get(i)!=a.get(j)){
+        //         return false;
+        //     }
+        //     i++;
+        //     j--;
+        // }
+        return rev==x;
     }
 }
