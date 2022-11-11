@@ -35,16 +35,16 @@ class Solution {
 //             }
 //         }
 //             return c;
-        int cur=0, n=nums.length, cnt=0;
-        if(n>0){
-            cnt++;
-        }
+        int n=nums.length, cur=0;
+        // if(n>0){
+        //     cnt++;
+        // }
         for(int i=1; i<n; i++){
             if(nums[i] != nums[cur]){
                 nums[++cur] = nums[i];
-                cnt++;
+                // cnt++;
             }
         }
-        return cnt;
+        return ++cur;
     }
 }
